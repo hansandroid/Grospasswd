@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Grospasswd</string>
+    <string name="input_main_password">Input main password</string>
+    <string name="get_passwords">Get passwords</string>
 </resources>

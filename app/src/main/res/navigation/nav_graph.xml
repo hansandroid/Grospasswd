@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.hansandroid.grospasswd.ui.auth.AuthFragment"
+        android:label="auth_fragment"
+        tools:layout="@layout/auth_fragment" >
+        <action
+            android:id="@+id/action_authFragment_to_accountsListFragment"
+            app:destination="@id/accountsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountsListFragment"
+        android:name="com.hansandroid.grospasswd.ui.accounts.AccountsListFragment"
+        android:label="AccountsListFragment" >
+        <action
+            android:id="@+id/action_accountsListFragment_to_accountDetailFragment"
+            app:destination="@id/accountDetailFragment" />
+        <action
+            android:id="@+id/action_accountsListFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountDetailFragment"
+        android:name="com.hansandroid.grospasswd.ui.accountdetail.AccountDetailFragment"
+        android:label="AccountDetailFragment" >
+        <action
+            android:id="@+id/action_accountDetailFragment_to_accountsListFragment"
+            app:destination="@id/accountsListFragment" />
+    </fragment>
+</navigation>
